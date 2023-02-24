@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav > div{
+    z-index: 50;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden !important;
+}
+
+nav{
+    display: block;
+    width: 100vw;
+    height: 58px;
+    z-index: 50;
+}
+nav > div{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+    backdrop-filter: blur(20px) ;
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.2);
+
+}
+nav > div > div{
+    max-width: 75%;
+    margin-inline: auto;
+    padding: 0 10px;
+    display: flex;
+}
+nav > div > div > a{
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+nav ul{
+    margin: 0;
+    margin-left: auto;
+    list-style: none;
+    display: inline-flex;
+    gap: 20px;
+    padding: 0;
+}
+nav ul li > a{
+    color: #cbd5e1;
+    margin: 0;
+    font-size: 1rem;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+nav ul button{
+    display: block; 
+    color: #cbd5e1;
+    padding: 26px 0;
+    border: none;
+    margin: 0;
+    background: none;
+    font-size: 1rem;
+    text-decoration: none;
+}
+nav ul a:hover, nav ul button:hover{
+    color: #0ea5e9;
+    cursor: pointer;
+}
+nav ul ~ div{
+    margin: 15px 0 15px 20px;
+    padding-left: 15px;
+    border-left: 1px solid rgba(203, 213, 225, 0.1);
+    display: flex;
+    align-items: center;
+}
+nav ul ~ div ul{
+    display: flex;
+    flex-flow: row nowrap;
+}
+nav ul ~ div ul li a{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+nav ul svg{
+    width: 20px;
+    height: 20px;
+    stroke-width: 3px;
+}
+nav > div > div > ul > li{
+    position: relative;
+}
+nav span ul{
+    position: absolute;
+    top: 77px;
+    display: none;
+    flex-flow: column nowrap;
+    width: 200px;
+    padding: 10px;
+    border-radius: 0 0px 5px 5px;
+    border: 1px solid rgba(203, 213, 225, 0.1);
+    border-top: none;
+    backdrop-filter: blur(20px) ;
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0,0,0,0.2);
+}
+nav ul button:hover ~ span ul, span ul:hover{
+    display: flex;
+}
+
+nav > div > div > ul ~ div ul li:last-of-type{
+    display: none;
+}
+
+nav > div > div > ul > li:first-of-type{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+    nav{
+        z-index: 500;
+    }
+    nav ul ~ div{
+        border: none;
+        margin-left: auto;
+    }
+    nav > div > div > ul{
+        position: fixed;
+        left: -280px;
+        top: 0;
+        height: 100vh;
+        width: 280px;
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        flex-flow: column nowrap;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        transition: 0.5s ease;
+        z-index: 20;
+    }
+    nav > div > div > ul > li > a, nav > div > div > ul > li > button{
+        padding: 26px 0;
+        margin-left: 20px;
+    }
+    nav > div > div > ul > li:first-of-type{
+        position: relative;
+        display: initial;
+        height: 74px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    nav > div > div > ul li:first-of-type button{
+        position: absolute;
+        right: 20px;
+    }
+    nav > div > div{
+        max-width: 100%;
+        margin-right: 20px;
+    }
+    nav > div > div > ul ~ div ul li:first-of-type{
+        display: none;
+    }
+    nav > div > div > ul ~ div ul li:last-of-type{
+        display: flex;
+    }
+    nav ul button:focus ~ span ul, span ul{
+        width: 100%;
+        background: rgba(0,0,0,0.2);
+        backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(1px);
+        display: flex;
+        z-index: 20;
+        border-top: 1px;
+        border: 1px solid rgba(255,255,255,0.2);
+        border-radius: 5px;
+    }
+}

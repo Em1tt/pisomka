@@ -1,0 +1,158 @@
+body{
+    background: #fff;
+}
+main{
+    margin-top: -60px;
+    display: grid;
+    width: 100vw;
+    grid-template-areas: 
+        "header header"
+        "secOne secTwo";
+    grid-template-rows: 2fr 1fr;
+    gap: 5px;
+}
+main > div{
+    background-size: contain;
+}
+main > div:nth-of-type(1){
+    background: url(/images/BMW_radu_1.jpg);
+    grid-area: header;
+    background-color: black;
+    height: 800px;
+    background-position: 0 -200px;
+}
+main > div:nth-of-type(2){
+    background: url(/images/338543.jpg);
+    grid-area: secOne;
+    background-color: blue;
+    background-position: -520px -600px;
+}
+main > div:nth-of-type(3){
+    background-image: linear-gradient(to bottom, rgba(0,0,0, 0.52), transparent), 
+    url(/images/BMW_radu_2.jpg);
+    grid-area: secTwo;
+    background-size: cover;
+    background-color: red;
+}
+
+main > div:first-of-type > div{
+    margin: 200px;
+    color: #fff;
+    max-width: 280px;
+}
+main > div:first-of-type > div > h1{
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+main > div > div > h2{
+    color: #eee;
+}
+main > div > div > div{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+main > div:first-of-type a{
+    padding: 10px 30px;
+    background: #0ea5e9;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #eee;
+    text-align: center;
+    transition: filter 0.2s ease;
+    z-index: 1;
+}
+main div:first-of-type div > a:nth-of-type(2){
+    background: transparent;
+    border: 2px solid white;
+}
+main a:hover{
+    filter: brightness(0.9);
+}
+
+main div:not(:first-of-type){
+    padding: 20px;
+}
+
+main > div:not(:first-of-type) a{
+    padding: 10px 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid white;
+    
+    text-decoration: none;
+    color: #eee;
+    text-align: center;
+    transition: filter 0.2s ease;
+    z-index: 1;
+    width: 50%;
+}
+
+section{
+    margin: 5px 0 5px 0;
+    display: grid;
+    width: 100vw;
+    grid-template-areas:
+        "header secOne secTwo secThree";
+    grid-template-rows: 300px;
+    gap: 5px;
+}
+section div{
+    padding: 20px;
+    background-color: rgba(0,0,0, 0.1);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+section > div > p{
+    font-size: 2rem;
+}
+section > div > a{
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+section > div:nth-of-type(2) > a{
+    background-color:#0ea5e9;
+    color:#eee;
+}
+section > div:not(:nth-of-type(2)) > a{
+    color:black;
+    border: 2px solid black;
+}
+section > div > a:hover{
+    filter: brightness(0.9);
+}
+
+@media screen and (max-width: 800px){
+    main > div:first-of-type > div{
+        margin: 200px 20px;
+    }
+    main > div:nth-of-type(1){
+        background-position: -700px -200px;
+    }
+    main > div:nth-of-type(2){
+        background: url(/images/338543.jpg);
+        grid-area: secOne;
+        background-position: -520px -600px;
+    }
+    main > div:nth-of-type(3){
+        background-image: linear-gradient(to bottom, rgba(0,0,0, 0.52), transparent), 
+            url(/images/BMW_radu_2.jpg);
+        grid-area: secTwo;
+        background-position: 0;
+    }
+    main{
+        margin-top: -60px;
+        display: grid;
+        width: 100vw;
+        grid-template-areas: 
+            "header"
+            "secOne"
+            "secTwo";
+        grid-template-rows: 2fr 1fr 1fr;
+        gap: 5px;
+    }
+}
