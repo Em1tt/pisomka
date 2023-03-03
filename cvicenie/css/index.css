@@ -14,22 +14,34 @@ main{
 main > div{
     background-size: contain;
 }
+
+main > div:not(:first-of-type) > *{
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+main > div:not(:first-of-type):hover > * {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 main > div:nth-of-type(1){
-    background: url(../images/BMW_radu_1.jpg);
+    background: url(/images/BMW_radu_1.jpg);
     grid-area: header;
     background-color: black;
     height: 800px;
     background-position: 0 -200px;
 }
 main > div:nth-of-type(2){
-    background: url(../images/338543.jpg);
+    background: url(/images/338543.jpg);
     grid-area: secOne;
     background-color: blue;
     background-position: -520px -600px;
 }
 main > div:nth-of-type(3){
     background-image: linear-gradient(to bottom, rgba(0,0,0, 0.52), transparent), 
-    url(../images/BMW_radu_2.jpg);
+    url(/images/BMW_radu_2.jpg);
     grid-area: secTwo;
     background-size: cover;
     background-color: red;
@@ -134,13 +146,13 @@ section > div > a:hover{
         background-position: -700px -200px;
     }
     main > div:nth-of-type(2){
-        background: url(../images/338543.jpg);
+        background: url(/images/338543.jpg);
         grid-area: secOne;
         background-position: -520px -600px;
     }
     main > div:nth-of-type(3){
         background-image: linear-gradient(to bottom, rgba(0,0,0, 0.52), transparent), 
-            url(../images/BMW_radu_2.jpg);
+            url(/images/BMW_radu_2.jpg);
         grid-area: secTwo;
         background-position: 0;
     }
