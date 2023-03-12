@@ -24,8 +24,8 @@ nav > div{
     top: 0;
     left: 0;
     border-bottom: 1px solid rgba(203, 213, 225, 0.1);
-    backdrop-filter: blur(20px) ;
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     background: rgba(0,0,0,0.2);
 
 }
@@ -105,8 +105,8 @@ nav span ul{
     border-radius: 0 0px 5px 5px;
     border: 1px solid rgba(203, 213, 225, 0.1);
     border-top: none;
-    backdrop-filter: blur(20px) ;
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px) ;
     background: rgba(0,0,0,0.2);
 }
 nav ul button:hover ~ span ul, span ul:hover{
@@ -135,8 +135,8 @@ nav > div > div > ul > li:first-of-type{
         top: 0;
         height: 100vh;
         width: 280px;
-        backdrop-filter: blur(100px);
         -webkit-backdrop-filter: blur(100px);
+        backdrop-filter: blur(100px);
         flex-flow: column nowrap;
         box-shadow: 0 0 10px rgba(0,0,0,0.2);
         transition: 0.5s ease;
@@ -169,8 +169,8 @@ nav > div > div > ul > li:first-of-type{
     nav ul button:focus ~ span ul, span ul{
         width: 100%;
         background: rgba(0,0,0,0.2);
-        backdrop-filter: blur(1px);
-        -webkit-backdrop-filter: blur(1px);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
         display: flex;
         z-index: 20;
         border-top: 1px;
