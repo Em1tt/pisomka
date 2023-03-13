@@ -167,4 +167,11 @@ section > div > a:hover{
         grid-template-rows: 2fr 1fr 1fr;
         gap: 5px;
     }
+    section{
+    grid-template-areas:
+    "header"
+    "secOne"
+    "secTwo"
+    "secThree";
+    }
 }
