@@ -1,0 +1,102 @@
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-bottom: 3px solid black;
+    background-color: white;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+header > div{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 15px;
+    gap: 20px;
+    align-items: center;
+}
+
+header > div > nav {
+    width: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+header > div > a {
+    display: grid;
+    place-items: center;
+}
+
+header > div > nav > a, header > div > nav > div > a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding: 12px 5px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+header > div > nav > a:hover{
+    border-bottom: 5px solid black;
+}
+
+header > button{
+    background-color: black;
+    border: none;
+    height: 100%;
+    padding: 1.5px 20px 0 20px;
+    color: white;
+}
+
+header > div > nav > a:hover, header > div > nav > div > a:hover, header > button:hover{
+    color: gray;
+}
+
+.dropdownWrapper{
+    display: grid;
+    place-items: center;
+}
+
+.dropdown{
+    display: none;
+}
+
+.dropdownWrapper:hover .dropdown{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: fixed;
+    left:0;
+    top: 57px;
+    background: white;
+    border: 3px solid black;
+    border-left: none;
+    border-top: 3px dashed black;
+    gap: 25px;
+    padding: 25px;
+}
+
+nav .dropdown a{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    gap: 10px;
+}
+
+nav .dropdown a:hover{
+    color: gray;
+}
+
+@media screen and (max-width: 807px) {
+    .dropdownWrapper:hover .dropdown{
+        border-right: none;
+    }
+}
