@@ -12,12 +12,17 @@ header{
     left:0;
 }
 
-header > div{
+header > div:first-of-type{
     display: flex;
     flex-flow: row nowrap;
     margin-left: 15px;
     gap: 20px;
     align-items: center;
+}
+header > div:last-of-type{
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 header > div > nav {
@@ -45,7 +50,7 @@ header > div > nav > a:hover{
     border-bottom: 5px solid black;
 }
 
-header > button{
+header > div > button{
     background-color: black;
     border: none;
     height: 100%;
@@ -95,8 +100,63 @@ nav .dropdown a:hover{
     color: gray;
 }
 
-@media screen and (max-width: 807px) {
+.signIn2, .menu{
+    display: none;
+}
+
+label{
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+input{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
     .dropdownWrapper:hover .dropdown{
         border-right: none;
+    }
+    nav{
+        position: fixed;
+        top: 57px;
+        left: -200px;
+        border-top: 3px dashed black;
+        border-right: 3px solid black;
+        width: 200px !important;
+        height: calc(100vh - 57px) !important;
+        background: white; 
+        flex-flow: column nowrap !important;
+        align-items:start;
+        padding: 20px;
+        gap: 20px;
+        transition: left 500ms ease;
+    }
+    input:checked ~ nav{
+        left:0px !important;
+    }
+    .dropdownWrapper:hover .dropdown{
+        display: none !important;
+    }
+    .dropdownWrapper:hover a{
+        border-bottom: 5px solid black;
+    }
+    .signIn1{
+        display: none;
+    }
+    .signIn2{
+        background: transparent;
+        color: black;
+    }
+    .signIn2, .menu{
+        display: grid !important;
+        place-items: center;
+    }
+    .menu{
+        background-color: black;
+        color: white;
+        padding: 1.5px  20px 0 20px;
     }
 }
