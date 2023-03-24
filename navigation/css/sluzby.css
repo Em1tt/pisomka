@@ -1,0 +1,116 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #DB3A34;
+}
+
+main{
+    margin-top:60px;
+    height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+main a{
+    border: 2px solid black;
+    background: radial-gradient(rgba(0,0,0,0.6), transparent),
+    var(--url);
+}
+main a:hover{
+    background: radial-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.2)), var(--url);
+}
+
+main a:nth-child(1){
+    --url: url("https://nedstevensli.com/wp-content/uploads/2020/07/PowerWash.jpg");
+}
+main a:nth-child(2){
+    --url: url("https://www.ppsteam.sk/imgcache/e-news-12-5-560-300-0-ffffff.jpg?v=1547190971");
+}
+main a:nth-child(3){
+    --url: url("https://www.profiobkladac.sk/resize/e/1200/630/files/suretile/tiletracker-1.5m10.jpg");
+}
+main a:nth-child(4){
+    --url: url("https://setmont.sk/wp-content/uploads/2013/09/stavebne-prace-769x513.jpg");
+}
+main a:nth-child(5){
+    --url: url("https://www.tatrabanka.sk/images/sk/zivotne-momenty/byvanie/rekonstrukcia/rekonstrukcia-byvania.jpg");
+}
+main a:nth-child(6){
+    --url: url("https://www.dyna-jet.com/assets/graffitis-entfernen/dynajet-grafitti-entfernung-03b.jpg/@@images/image/gallery");
+}
+main a:nth-child(7){
+    --url: url("https://i.etsystatic.com/18168488/r/il/65d392/4511050196/il_570xN.4511050196_k1rd.jpg");
+}
+main a:nth-child(8){
+    --url: url("https://www.technikaaremeslo.cz/media/k2/items/cache/deb9f9efc56ef2a940bdf0d58ccaad5c_L.jpg");
+}
+
+main a{
+    background-size: cover !important;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+main a div{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    main a{
+        border: none;
+        font-size: 1rem;
+        text-align: center;
+        border-bottom: 4px solid black;
+    }
+    main a:nth-child(2n+2){
+        border-left: 2px solid black;
+    }
+    main a:nth-child(2n+1){
+        border-right: 2px solid black;
+    }
+}
+
+@media screen and (max-width: 320px){
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    main a{
+        border-bottom: 4px solid black;
+    }
+    main a:nth-child(2n+2){
+        border-left: none;
+    }
+    main a:nth-child(2n+1){
+        border-right: none;
+    }
+}
+@media screen and (max-width: 200px){
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+    }
+    main a{
+        border-bottom: 4px solid black;
+    }
+    main a:nth-child(2n+2){
+        border-left: none;
+    }
+    main a:nth-child(2n+1){
+        border-right: none;
+    }
+}

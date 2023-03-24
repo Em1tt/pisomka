@@ -5,5 +5,95 @@
 
 body{
     margin: 0;
-    background-color: #DB3A34;
+    background: #DB3A34 url("/navigation/images/background2.png");
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+h1{
+    height: 45px;
+    overflow-y: hidden;
+    overflow-x: visible;
+    padding-inline: 30px;
+}
+h1 span{
+    position: relative;
+    animation: animation1 6s ease-in-out alternate infinite;
+}
+h1 span::before{
+    position: absolute;
+    top: -50px;
+    left: -18px;
+    content: "Vytvárame";
+}
+h1 span::after{
+    position: absolute;
+    top: 50px;
+    left: 8px;
+    content: "Staviame";
+}
+main div div{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+main div div a, main div div button{
+    background: black;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}
+
+@keyframes animation1{
+    0%{
+        top: -52px;
+    }
+    20%{
+        top: -52px;
+    }
+    40%{
+        top: 0;
+    }
+    60%{
+        top: 0;
+    }
+    80%{
+        top: 48px;
+    }
+    100%{
+        top: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1{
+        overflow-y: visible;
+        height: unset;
+        text-align: center;
+    }
+    h1 span{
+        animation: none;
+    }
+    h1 span::after{
+        display: none;
+    }
+    h1 span::before{
+        display: none;
+    }
+    main div div{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    main div div a, main div div button{
+        width: 80%;
+    }
 }

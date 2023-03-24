@@ -10,6 +10,7 @@ header{
     position: fixed;
     top:0;
     left:0;
+    z-index: 50;
 }
 
 header > div:first-of-type{
@@ -118,6 +119,7 @@ input{
 @media screen and (max-width: 768px) {
     .dropdownWrapper:hover .dropdown{
         border-right: none;
+        display: none !important;
     }
     nav{
         position: fixed;
@@ -129,16 +131,14 @@ input{
         height: calc(100vh - 57px) !important;
         background: white; 
         flex-flow: column nowrap !important;
-        align-items:start;
+        align-items:start !important;
         padding: 20px;
         gap: 20px;
         transition: left 500ms ease;
+        justify-content: start !important;
     }
     input:checked ~ nav{
         left:0px !important;
-    }
-    .dropdownWrapper:hover .dropdown{
-        display: none !important;
     }
     .dropdownWrapper:hover a{
         border-bottom: 5px solid black;
@@ -158,5 +158,45 @@ input{
         background-color: black;
         color: white;
         padding: 1.5px  20px 0 20px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    main a{
+        border: none;
+        font-size: 1rem;
+        text-align: center;
+        border-bottom: 4px solid black;
+    }
+    main a:nth-child(2n+2){
+        border-left: 2px solid black;
+    }
+    main a:nth-child(2n+1){
+        border-right: 2px solid black;
+    }
+}
+
+@media screen and (max-width: 320px){
+    header img{
+        width: 100px;
+    }
+    header label, header button{
+        padding: 5px !important;
+    }
+}
+@media screen and (max-width: 200px){
+    header img{
+        width: 60px;
+    }
+    header{
+        flex-flow: column nowrap !important;
+    }
+    header label, header button{
+        padding: 5px !important;
+        width:50%;
     }
 }
