@@ -11,6 +11,9 @@ body{
     height: 100vh;
     color: white;
     text-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-position: 50% 50%;
+    background-size: 120%;
+    background-repeat: no-repeat;
 }
 h1{
     height: 45px;
@@ -95,5 +98,10 @@ main div div a, main div div button{
     }
     main div div a, main div div button{
         width: 80%;
+    }
+    body{
+        background-position: 50% 50%;
+        background-size: 150%;
+        background-repeat: no-repeat;
     }
 }
