@@ -5,7 +5,7 @@
 
 body{
     margin: 0;
-    background: #DB3A34 url("/school/navigation/images/background2.png");
+    background: #DB3A34 url("../images/background2.png");
     display: grid;
     place-items: center;
     height: 100vh;
