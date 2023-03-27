@@ -34,7 +34,7 @@ header{
 ### Dropdown
 ```html
 <div class="dropdownWrapper">
-    <a href="/school/navigation/html/sluzby.html">Služby</a>
+    <a href="./html/sluzby.html">Služby</a>
     <div class="dropdown">...</div>
 </div>
 ```
